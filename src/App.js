@@ -21,8 +21,8 @@ class App extends Component{    //changed the function to a class, same App comp
     }
 
     render(){
-        const filteredrobots = this.state.robots.filter(robots =>{
-            return robots.name.toLocaleLowerCase().includes(this.state.searchfield.toLocaleLowerCase());
+        const filteredrobots = this.state.robots.filter(robot =>{
+            return robot.name.toLocaleLowerCase().includes(this.state.searchfield.toLocaleLowerCase());
         })
         //console.log(filterrobots);
         return (
