@@ -1,3 +1,4 @@
+// card component eka haduwa card list ekata iterate karanna
 import React from 'react';
 
 const Card = ({name, email, id}) => {

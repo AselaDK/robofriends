@@ -1,3 +1,5 @@
+// robots la inna object array eka
+
 export const robots = [
   {
     id: 1,

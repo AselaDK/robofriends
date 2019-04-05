@@ -1,3 +1,5 @@
+//card component tika iterate karannai haduwe
+
 import React from 'react';
 import Card from './Card';
 
