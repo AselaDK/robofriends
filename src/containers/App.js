@@ -8,7 +8,9 @@ import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 
 import './App.css';
-import Scroll from '../components/Scroll'
+import Scroll from '../components/Scroll';
+
+import ErrorBoundry from '../components/ErrorBoundry';
 
 
 class App extends Component{    //changed the function to a class, same App component
@@ -52,7 +54,9 @@ class App extends Component{    //changed the function to a class, same App comp
                 <h1 className = 'f1'>RoboFriends</h1>
                 <SearchBox searchChange = {this.onSearchChange} />  {/* set search change event */}
                 <Scroll>    {/* wrap component by another component */}
-                    <CardList robots = {filteredrobots} /> {/* pasted from index.js*/}  {/* show filtered robots */}
+                    <ErrorBoundry>      {/* wrap component by errorboundry component */}
+                        <CardList robots = {filteredrobots} /> {/* pasted from index.js*/}  {/* show filtered robots */}
+                    </ErrorBoundry>
                 </Scroll>
             </div>
         );
